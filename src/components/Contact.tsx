@@ -6,7 +6,7 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl">
         <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-gold">Say hello</p>
         <h2 className="mt-2 max-w-md font-display text-3xl leading-tight sm:text-4xl">
-          Looking for a teacher, writer, IT support, or Microsoft Office
+          Looking for a Teacher, Writer, IT support, or Microsoft Office
           specialist? I can help with all four.
         </h2>
 
