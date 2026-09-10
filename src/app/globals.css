@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1b2a41;
+  --ink-soft: #2c3e58;
+  --paper: #f6f1e4;
+  --paper-dim: #efe6d0;
+  --paper-line: #d9cdaf;
+  --gold: #c68a2e;
+  --gold-deep: #a06e21;
+  --sage: #5b7a64;
+  --charcoal: #24211c;
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-plex);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-paper-dim: var(--paper-dim);
+  --color-paper-line: var(--paper-line);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-sage: var(--sage);
+  --color-charcoal: var(--charcoal);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
