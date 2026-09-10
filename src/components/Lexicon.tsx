@@ -82,7 +82,7 @@ const DIGITAL: Entry[] = [
 
 function Column({ heading, entries, accent }: { heading: string; entries: Entry[]; accent: string }) {
   return (
-    <div>
+    <div className="rounded-3xl border border-paper-line bg-paper/70 p-6 md:p-8">
       <h3 className="font-display text-2xl italic text-ink">{heading}</h3>
       <div className="mt-6 divide-y divide-paper-line border-t border-paper-line">
         {entries.map((entry, i) => (
@@ -117,9 +117,9 @@ function Column({ heading, entries, accent }: { heading: string; entries: Entry[
 
 export default function Lexicon() {
   return (
-    <section id="lexicon" className="bg-paper px-6 py-24 md:px-10">
-      <div className="mx-auto max-w-5xl">
-        <p className="font-body text-sm text-sage">A short lexicon</p>
+    <section id="lexicon" className="bg-paper px-6 py-24 md:px-10 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-sage">A short lexicon</p>
         <h2 className="mt-2 max-w-xl font-display text-3xl leading-tight text-ink sm:text-4xl">
           Two vocabularies, one person.
         </h2>
@@ -129,7 +129,7 @@ export default function Lexicon() {
           student.
         </p>
 
-        <div id="work" className="mt-14 grid gap-14 md:grid-cols-2 md:gap-10">
+        <div id="work" className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
           <Column heading="Language & Teaching" entries={LANGUAGE} accent="#5b7a64" />
           <Column heading="Digital & Office" entries={DIGITAL} accent="#a06e21" />
         </div>

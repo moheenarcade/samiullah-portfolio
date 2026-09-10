@@ -59,14 +59,14 @@ const ITEMS: Item[] = [
 
 export default function Timeline() {
   return (
-    <section id="timeline" className="bg-paper-dim px-6 py-24 md:px-10">
-      <div className="mx-auto max-w-3xl">
-        <p className="font-body text-sm text-sage">Chronologically</p>
+    <section id="timeline" className="bg-paper-dim px-6 py-24 md:px-10 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-sage">Chronologically</p>
         <h2 className="mt-2 font-display text-3xl leading-tight text-ink sm:text-4xl">
           Where the last six years went.
         </h2>
 
-        <div className="relative mt-14 pl-8 sm:pl-10">
+        <div className="relative mt-14 max-w-4xl pl-8 sm:pl-10">
           <motion.div
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
@@ -87,13 +87,13 @@ export default function Timeline() {
                 className="relative"
               >
                 <span className="absolute -left-8 top-1.5 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-gold-deep bg-paper-dim sm:-left-10" />
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex flex-wrap items-center gap-3">
                   <p className="font-body text-sm text-charcoal/50">{item.period}</p>
                   <span
                     className={`rounded-full px-2 py-0.5 text-xs font-medium ${
                       item.kind === "Work"
                         ? "bg-sage/15 text-sage"
-                        : "bg-gold-deep/15 text-gold-deep"
+                        : "bg-gold/20 text-gold-deep"
                     }`}
                   >
                     {item.kind}

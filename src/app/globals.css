@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #1b2a41;
-  --ink-soft: #2c3e58;
-  --paper: #f6f1e4;
-  --paper-dim: #efe6d0;
-  --paper-line: #d9cdaf;
-  --gold: #c68a2e;
-  --gold-deep: #a06e21;
-  --sage: #5b7a64;
-  --charcoal: #24211c;
+  --ink: #14213d;
+  --ink-soft: #344563;
+  --paper: #fbf8f1;
+  --paper-dim: #eef3f1;
+  --paper-line: #d4dfdc;
+  --gold: #f15a4a;
+  --gold-deep: #c83e3c;
+  --sage: #198f8b;
+  --charcoal: #1b263b;
   --font-display: var(--font-fraunces);
   --font-body: var(--font-plex);
 }
@@ -40,16 +40,17 @@ body {
   background: var(--paper);
   color: var(--charcoal);
   font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
 }
 
 ::selection {
   background: var(--gold);
   color: var(--ink);
-}
-
-:focus-visible {
-  outline: 2px solid var(--gold-deep);
-  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {

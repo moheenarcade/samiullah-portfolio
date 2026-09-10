@@ -23,23 +23,26 @@ export default function Nav() {
 
   return (
     <header
-      className={`sticky top-0 z-40 border-b transition-colors duration-300 ${
+      className={`sticky top-0 z-40 border-b transition-all duration-300 ${
         scrolled
-          ? "bg-paper/95 backdrop-blur border-paper-line"
-          : "bg-transparent border-transparent"
+          ? "border-paper-line bg-paper/90 shadow-sm backdrop-blur-xl"
+          : "border-paper/10 bg-ink/90 backdrop-blur-md"
       }`}
     >
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4 md:px-10">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         <a
           href="#top"
-          className={`font-display text-lg italic transition-colors duration-300 ${
+          className={`flex items-center gap-3 font-body text-sm font-semibold tracking-wide transition-colors duration-300 ${
             scrolled ? "text-ink" : "text-paper"
           }`}
         >
-          S. Khan
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold font-display text-base text-ink">
+            SK
+          </span>
+          <span>Samiullah Khan</span>
         </a>
 
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {LINKS.map((link) => (
             <a
               key={link.href}
@@ -52,13 +55,19 @@ export default function Nav() {
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-gold-deep transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
+          <a
+            href="#contact"
+            className="rounded-full bg-gold px-4 py-2 text-xs font-semibold text-ink transition-transform hover:-translate-y-0.5"
+          >
+            Let&apos;s talk
+          </a>
         </nav>
 
         <button
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full border border-paper/20 md:hidden"
         >
           <span
             className={`h-px w-6 transition-transform duration-300 ${
@@ -79,13 +88,13 @@ export default function Nav() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-paper-line bg-paper px-6 pb-5 md:hidden">
+        <nav className="flex flex-col gap-1 border-t border-paper/10 bg-ink px-6 pb-5 md:hidden">
           {LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="border-b border-paper-line py-3 text-sm text-ink-soft last:border-none"
+              className="border-b border-paper/10 py-3 text-sm text-paper/80 last:border-none"
             >
               {link.label}
             </a>

@@ -22,9 +22,9 @@ const CERTS = [
 
 export default function Certificates() {
   return (
-    <section id="certificates" className="bg-paper px-6 py-24 md:px-10">
-      <div className="mx-auto max-w-5xl">
-        <p className="font-body text-sm text-sage">On paper</p>
+    <section id="certificates" className="bg-paper px-6 py-24 md:px-10 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-sage">On paper</p>
         <h2 className="mt-2 max-w-lg font-display text-3xl leading-tight text-ink sm:text-4xl">
           A few certificates worth mentioning.
         </h2>
@@ -37,9 +37,9 @@ export default function Certificates() {
               whileInView={{ opacity: 1, rotate: 0, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="relative border border-ink/15 bg-paper-dim p-6"
+              className="relative rounded-2xl border border-paper-line bg-paper-dim p-6 transition-transform duration-300 hover:-translate-y-1 hover:border-gold/60"
             >
-              <span className="absolute right-4 top-4 h-9 w-9 rounded-full border-2 border-dashed border-gold-deep/50" />
+              <span className="absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full bg-gold/15 font-body text-xs font-semibold text-gold-deep">✓</span>
               <p className="font-display text-lg leading-snug text-ink">
                 {cert.title}
               </p>

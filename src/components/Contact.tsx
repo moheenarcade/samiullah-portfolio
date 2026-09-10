@@ -2,9 +2,9 @@
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-ink px-6 py-24 text-paper md:px-10">
-      <div className="mx-auto max-w-3xl">
-        <p className="font-body text-sm text-gold">Say hello</p>
+    <section id="contact" className="bg-ink px-6 py-24 text-paper md:px-10 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-gold">Say hello</p>
         <h2 className="mt-2 max-w-md font-display text-3xl leading-tight sm:text-4xl">
           Looking for a teacher, a writer, or someone to fix the printer.
           I answer to all three.
@@ -41,7 +41,7 @@ export default function Contact() {
           {["English", "Urdu", "Hindko"].map((lang) => (
             <span
               key={lang}
-              className="border border-paper/20 px-3 py-1 font-body text-xs text-paper/70"
+              className="rounded-full border border-paper/20 px-3 py-1 font-body text-xs text-paper/70"
             >
               {lang}
             </span>
